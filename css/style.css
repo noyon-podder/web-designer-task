@@ -32,6 +32,38 @@ a:hover {
   --text-color: #4a5568;
 }
 
+/* common css */
+
+.section-title h2 {
+  font-size: 22px;
+  color: #222;
+  font-weight: 700;
+  position: relative;
+}
+.title-leaf {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.first-border,
+.second-border {
+  width: 60px;
+  height: 1px;
+  background-color: var(--main-color);
+}
+.title-leaf i {
+  color: var(--main-color);
+  text-align: center;
+  position: relative;
+  font-size: 22px;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-top: 10px;
+}
+
 /* top section  start*/
 .top-section {
   background-color: var(--main-color);
@@ -157,3 +189,225 @@ a:hover {
   border-right: 2px solid var(--border-color);
   border-left: 2px solid var(--border-color);
 }
+
+/* banner section style start */
+
+.first-image {
+  background: url(../assests/paris_01.jpg);
+  background-size: cover;
+  background-position: left center;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.first-image:hover {
+  opacity: 0.7;
+}
+
+.second-image {
+  border-radius: 10px;
+  width: 100%;
+  height: 220px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.second-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.third-image {
+  background: url(../assests/paris_03.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  width: 100%;
+  height: 240px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* category card start */
+.catergory-card-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.category-card-container {
+  width: 162px;
+  max-width: 162px;
+  height: 130px;
+  background-color: #f1f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.category-card-container:hover::after {
+  background: url(../assests/hover.png);
+  background-position: center;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+.category-card-container p {
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+/* category card end */
+
+/* advertise banner start */
+.advertise-banner {
+  background: url(../assests/sub-banner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+}
+
+/* food card wrapper start  */
+.food-card-wrapper {
+  border: 1px solid var(--border-color);
+  padding: 20px 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.food-card-container {
+  width: 250px;
+  cursor: pointer;
+}
+.card-image {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  overflow: hidden;
+}
+.card-image img {
+  transition: all 0.6s;
+}
+
+.card-action-icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #f1f1f1;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  padding: 15px 8px;
+  border-radius: 10px;
+  gap: 7px;
+  transition: all 0.4s ease-in;
+}
+.category-card-container:hover .card-action-icon {
+  display: block;
+}
+.card-action-icon i {
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.food-card-container:hover .card-image img {
+  transform: scale(1.2);
+}
+.card-content {
+  padding: 20px 10px;
+}
+
+.card-content h2 {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--black-color);
+}
+.card-content span {
+  font-size: 14px;
+  color: var(--text-color);
+  margin: 0;
+}
+.card-content h5 {
+  color: var(--main-color);
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 8px;
+}
+.card-content del {
+  font-size: 16px;
+  color: var(--black-color);
+  font-weight: 400;
+  margin-left: 15px;
+}
+
+.card-content .icons {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+.card-content .icons i {
+  color: #ffc700;
+}
+.card-button {
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--black-color);
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.4s ease-in;
+}
+.food-card-container:hover .card-button {
+  background: var(--main-color);
+  color: var(--white-color);
+}
+.plus-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.plus-icon i {
+  color: var(--main-color);
+  font-size: 18px;
+}
+/* food card wrapper end */
